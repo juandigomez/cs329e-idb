@@ -16,7 +16,19 @@ def index():
 @app.route('/aboutus/')
 def aboutus():
 	return render_template('aboutus.html')
+	
+@app.route('/books/')
+def books():
+	return render_template('books.html')
 
+@app.route('/authors/')
+def authors():
+	return render_template('authors.html')
+	
+@app.route('/publishers/')
+def publishers():
+	return render_template('publishers.html')
+	
 # if app.py is run directly, i.e., as the main module, it will be assigned the value main # and if it's main go ahead and run the application. 
 # if this application is imported, then the __name__ is no longer __main__ and  
 # the code, app.run(), will not be executed 

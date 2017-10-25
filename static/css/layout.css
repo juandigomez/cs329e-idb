@@ -28,7 +28,7 @@ div a.splash{
 }
 
 body{
-	background-image: url("static/images/texas.jpg");
+	background-image: url("../static/images/texas.jpg");
 	background-attachment: fixed;
 }
 
