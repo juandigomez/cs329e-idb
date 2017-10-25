@@ -1,0 +1,35 @@
+<!DOCTYPE HTML>
+
+<html> 
+  <head>
+    <title>Brandon Sanderson</title>
+	<link rel = "STYLESHEET" href="{{ url_for('static',filename='css/layout.css') }}" type="text/css"/>
+  </head>
+
+  <body>
+	<div id="nav">
+		<ul id="navbar">
+			<li><a href="{{url_for('index')}}">Home</a></li>
+			<li><a href="{{url_for('aboutus')}}">About Us</a></li>
+			<li><a href="{{url_for('books')}}">Books</a></li>
+			<li><a href="{{url_for('authors')}}">Authors</a></li>
+			<li><a href="{{url_for('publishers')}}">Publishers</a></li>
+		</ul>
+	</div>
+  <div class="center">	
+	<h1>Brandon Sanderson</h1>
+	<hr>
+	<img src= "http://upload.wikimedia.org/wikipedia/commons/thumb/7/70/Brandon_Sanderson_sign.jpg/250px-Brandon_Sanderson_sign.jpg">
+	<p>
+		Brandon Sanderson is an American fantasy and science fiction writer. 
+		He is best known for his Mistborn series and his work in finishing Robert 
+		Jordan's epic fantasy series The Wheel of Time.
+	</p>
+	<p>Born: December 19, 1975</p>
+	<p>Nationality: American</p>
+	<p>Alma Mater: Brigham Young University (B.A., M.A.)</p>
+	<p><a href="https://en.wikipedia.org/wiki/Brandon_Sanderson">Wikipedia</a></p>
+	<hr/>
+  </div>
+  </body>
+</html>

@@ -28,6 +28,14 @@ def authors():
 @app.route('/publishers/')
 def publishers():
 	return render_template('publishers.html')
+	
+@app.route('/Brandon_Sanderson/')
+def sanderson():
+	return render_template('sanderson.html')
+	
+@app.route('/Orson_Scott_Card/')
+def card():
+	return render_template('card.html')
 
 def static_file_hash(filename):
   return int(os.stat(filename).st_mtime)
@@ -84,5 +92,4 @@ def hashed_url_for_static_file(endpoint, values):
 
 if __name__ == "__main__":
 	app.run()
- 
  
