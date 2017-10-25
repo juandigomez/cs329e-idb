@@ -36,6 +36,10 @@ def sanderson():
 @app.route('/Orson_Scott_Card/')
 def card():
 	return render_template('card.html')
+	
+@app.route('/Douglas_Adams/')
+def adams():
+	return render_template('adams.html')
 
 def static_file_hash(filename):
   return int(os.stat(filename).st_mtime)

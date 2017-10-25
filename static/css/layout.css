@@ -57,9 +57,11 @@ body{
 	border-bottom: 0px;
 	border-color: white;
 	border-style: solid;
+	color: white
 }
 
 #navbar{
 	margin: 0;
 	padding: 0px;
 }
+	
