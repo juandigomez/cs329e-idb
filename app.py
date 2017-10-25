@@ -83,6 +83,6 @@ def hashed_url_for_static_file(endpoint, values):
 # the code, app.run(), will not be executed 
 
 if __name__ == "__main__":
-	app.run() 
+	app.run()
  
  
