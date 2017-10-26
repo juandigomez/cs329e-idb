@@ -58,15 +58,15 @@ def goldenhand():
     return render_template('goldenhand.html')
 
 # Individual Publisher Pages
-@app.route('/publishers-Palgrave_Macmillan')
+@app.route('/palgravemacmillan/')
 def palgravemacmillan():
     return render_template('palgravemacmillan.html')
 
-@app.route('/publishers-Del_Rey_Books/')
-def delraybooks():
+@app.route('/delreybooks/')
+def delreybooks():
     return render_template('delreybooks.html')
 
-@app.route('/publishers-Allen_and_Unwin/')
+@app.route('/allenandunwin/')
 def allenandunwin():
     return render_template('allenandunwin.html')
 
