@@ -29,17 +29,21 @@ def authors():
 def publishers():
 	return render_template('publishers.html')
 	
-@app.route('/Brandon_Sanderson/')
+@app.route('/authors-Brandon_Sanderson/')
 def sanderson():
 	return render_template('sanderson.html')
 	
-@app.route('/Orson_Scott_Card/')
+@app.route('/authors-Orson_Scott_Card/')
 def card():
 	return render_template('card.html')
 	
-@app.route('/Douglas_Adams/')
+@app.route('/authors-Douglas_Adams/')
 def adams():
 	return render_template('adams.html')
+
+@app.route('/books-Enders_Game/')
+def endersgame():
+    return render_template('endersgame.html')
 
 
 def static_file_hash(filename):
