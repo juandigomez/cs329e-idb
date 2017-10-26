@@ -9,10 +9,12 @@ app = Flask(__name__)
 # flask will run the function index() 
 # summary: type in a URL, flask check the URL, finds the associate function with it, runs the function,  collect responses, and send back the results to the browser.
 
+# General
 @app.route('/')
 def index():
 	return render_template("index.html")
 
+# Summary Pages
 @app.route('/aboutus/')
 def aboutus():
 	return render_template('aboutus.html')
@@ -28,7 +30,8 @@ def authors():
 @app.route('/publishers/')
 def publishers():
 	return render_template('publishers.html')
-	
+
+# Individual author pages	
 @app.route('/authors-Garth_Nix/')
 def nix():
 	return render_template('nix.html')
@@ -41,6 +44,7 @@ def card():
 def adams():
 	return render_template('adams.html')
 
+# Individual book pages
 @app.route('/books-Enders_Game/')
 def endersgame():
     return render_template('endersgame.html')
@@ -52,6 +56,19 @@ def restaurant():
 @app.route('/books-Goldenhand/')
 def goldenhand():
     return render_template('goldenhand.html')
+
+# Individual Publisher Pages
+@app.route('/publishers-Palgrave_Macmillan')
+def goldenhand():
+    return render_template('palgravemacmillan.html')
+
+@app.route('/publishers-Del_Ray_Books/')
+def goldenhand():
+    return render_template('delraybooks.html')
+
+@app.route('/publishers-Allen_and_Unwin/')
+def goldenhand():
+    return render_template('allenandunwin.html')
 
 
 # The following functions handle caching problems
