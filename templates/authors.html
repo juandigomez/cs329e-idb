@@ -96,38 +96,5 @@
 			<td>The Way of Kings</td>
 		</tr>
 	<script type="text/javascript">
-	function sortTable(col, n){
-		var table = document.getElementById("booksTable");
-		var direction = n; //1 = descending, 0 = ascending
-		var notSorted = true;
-		var needSwitch = false;
-		while(notSorted){
-			var rows = table.getElementsByTagName("TR");
-			var i;
-			for(i = 1; i < rows.length - 1; i++){
-				var curr = rows[i].getElementsByTagName("TD")[col];
-				var comp = rows[i+1].getElementsByTagName("TD")[col];
-				if(direction == 0){
-					if(curr.innerHTML.toLowerCase() > comp.innerHTML.toLowerCase()){
-						needSwitch = true;
-						break;
-					}
-				}
-				else{
-					if(curr.innerHTML.toLowerCase() < comp.innerHTML.toLowerCase()){
-						needSwitch = true;
-						break;
-					}
-				}
-			}
-			if(needSwitch){
-				rows[i].parentNode.insertBefore(rows[i+1], rows[i]);
-			}
-			else{
-				notSorted = false;
-			}
-		}
-	}
-	</script>
 </body>
 </html>
