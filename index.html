@@ -1,0 +1,25 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<link rel = "stylesheet" href = "{{ url_for('static',filename='css/layout.css') }}" type = "text/css">
+</head>
+<body id="splashBody">
+	<title>Project 3 idb</title>
+	<h1 id="pageTitle">
+		Welcome to our website!
+	</h1>
+	<div class="center">
+		<a href="{{url_for('aboutus')}}" class="splash">About Us</a>
+	</div>
+	<div class="center">
+		<a href="{{url_for('books')}}" class="splash">Books</a>
+	</div>
+	<div class="center">
+		<a href="{{url_for('authors')}}" class="splash">Authors</a>
+	</div>
+	<div class="center">
+		<a href="{{url_for('publishers')}}" class="splash">Publishers</a>
+	</div>
+
+</body>
+</html>
