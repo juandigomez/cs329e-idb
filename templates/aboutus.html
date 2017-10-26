@@ -2,18 +2,23 @@
 <html>
 <head>
 	<title>About Us</title>
-	<link rel = "STYLESHEET" href="{{ url_for('static',filename='css/layout.css') }}" type="text/css"/>  
-</head>
-<body>
-	<div id="nav">
-		<ul id="navbar">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  	<style>
+  		<link rel = "STYLESHEET" href="{{ url_for('static',filename='css/layout.css') }}" type="text/css"/> 
+	</style>
+<body id = "bootstrapBody">
+	<div class = "container">
+		<ul class = "nav nav-tabs">
 			<li><a href="{{url_for('index')}}">Home</a></li>
-			<li><a href="{{url_for('aboutus')}}">About Us</a></li>
+			<li class = "active"><a href="{{url_for('aboutus')}}">About Us</a></li>
 			<li><a href="{{url_for('books')}}">Books</a></li>
 			<li><a href="{{url_for('authors')}}">Authors</a></li>
 			<li><a href="{{url_for('publishers')}}">Publishers</a></li>
 		</ul>
 	</div>
+	<h1 id = "pageTitle">About Us</h1>
 	<div class="center">
 		<h3>Zach Quinlan</h3>
 		<img src="{{ url_for('static',filename='images/Zach.jpg') }}" height = "500" width = "400">
