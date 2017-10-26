@@ -1,0 +1,563 @@
+commit 33159719c82bc89010f63eeed385634c62a54922
+Author: ZachQuinlan <z.quinlan96@utexas.edu>
+Date:   Thu Oct 26 15:33:36 2017 -0500
+
+    Update about us with total commits/issues
+
+commit 45067ca4c1b353bdac042256643da89d48a9b351
+Author: ZachQuinlan <z.quinlan96@utexas.edu>
+Date:   Thu Oct 26 15:22:02 2017 -0500
+
+    Fixed background CSS issue
+
+commit 8dd7e6f44f7062459ccf0689cb08a7a0082f5f94
+Author: robertrdz181 <31742078+robertrdz181@users.noreply.github.com>
+Date:   Thu Oct 26 15:21:45 2017 -0500
+
+    Update app.py
+    
+    Final app.py
+
+commit 72b2402084e5ae994e5b13ef355ba5587f49d5a2
+Author: ZachQuinlan <z.quinlan96@utexas.edu>
+Date:   Thu Oct 26 15:06:06 2017 -0500
+
+    Update navbar
+
+commit de1df1ece6b4958c90a9bbca59d67a0d4163e9c6
+Author: ZachQuinlan <z.quinlan96@utexas.edu>
+Date:   Thu Oct 26 15:05:29 2017 -0500
+
+    Update navbar
+
+commit 8ff631401fb5b9a07b96047876afaef8553bcc1a
+Author: ZachQuinlan <z.quinlan96@utexas.edu>
+Date:   Thu Oct 26 15:04:57 2017 -0500
+
+    Update navbar
+
+commit cfbf6743e20f671846ecd44f2dd4420c3e013a52
+Author: robertrdz181 <31742078+robertrdz181@users.noreply.github.com>
+Date:   Thu Oct 26 15:04:10 2017 -0500
+
+    Update palgravemacmillan.html
+    
+    Re-edit data to ensure consistency
+
+commit c7b955866028acafc2d8306473baca755e415dc2
+Author: robertrdz181 <31742078+robertrdz181@users.noreply.github.com>
+Date:   Thu Oct 26 15:03:03 2017 -0500
+
+    Update delreybooks.html
+    
+    Re-edit data to make information consistent
+
+commit 882be5c50e457e215c960444c2443eacd023bfd7
+Author: robertrdz181 <31742078+robertrdz181@users.noreply.github.com>
+Date:   Thu Oct 26 15:01:43 2017 -0500
+
+    Update allenandunwin.html
+    
+    Re-edit data to make information consistent.
+
+commit ce95f09b3a9debe29c506bf657144e8033e6686c
+Author: ZachQuinlan <z.quinlan96@utexas.edu>
+Date:   Thu Oct 26 14:54:35 2017 -0500
+
+    Fixed Link Errors with publishers
+
+commit 1b35d759353295a4d259526b40540e1fc1a63e05
+Author: ZachQuinlan <z.quinlan96@utexas.edu>
+Date:   Thu Oct 26 14:53:49 2017 -0500
+
+    Updated publishers links
+
+commit 3ef760c1333c22b7e7966989d7740a21a6bec6ed
+Author: Daniel Smarda <danieljsmarda@gmail.com>
+Date:   Thu Oct 26 14:53:27 2017 -0500
+
+    Create .gitignore
+
+commit 7be0ced632aea034d998588fff80dcf96afe68d4
+Author: ZachQuinlan <z.quinlan96@utexas.edu>
+Date:   Thu Oct 26 14:32:22 2017 -0500
+
+    Updated About us - include stats, data, tools
+
+commit 305f6ad142a6613cc332a25be503e007573d1753
+Author: robertrdz181 <31742078+robertrdz181@users.noreply.github.com>
+Date:   Thu Oct 26 14:30:33 2017 -0500
+
+    Add files via upload
+    
+    Initial commit of framework for individual publisher pages
+
+commit 4463711143609c8842cfb71a36b06bc266beec07
+Author: robertrdz181 <31742078+robertrdz181@users.noreply.github.com>
+Date:   Thu Oct 26 14:28:41 2017 -0500
+
+    Delete delreybooks.html
+
+commit 41be55fe2e719c7dd3489afe46863dab28541970
+Author: robertrdz181 <31742078+robertrdz181@users.noreply.github.com>
+Date:   Thu Oct 26 14:28:25 2017 -0500
+
+    Delete palgravemacmillan.html
+
+commit a4ea68cbd3df1cd51c444905ee9d61b234e17ae0
+Author: robertrdz181 <31742078+robertrdz181@users.noreply.github.com>
+Date:   Thu Oct 26 14:28:07 2017 -0500
+
+    Delete allenandunwin.html
+
+commit 7113b4793858e41957c7c31d2d3c8f559479523f
+Author: Daniel Smarda <danieljsmarda@gmail.com>
+Date:   Thu Oct 26 14:27:43 2017 -0500
+
+    Fixed Spelling Error Del Rey
+
+commit 013b5cfc1b0561370a6685d060f1a247bdabcf41
+Author: Daniel Smarda <danieljsmarda@gmail.com>
+Date:   Thu Oct 26 14:26:35 2017 -0500
+
+    Fixed Spelling Error
+
+commit b1cecb3872c424559a15ead466d92fe56ecb28fa
+Author: robertrdz181 <31742078+robertrdz181@users.noreply.github.com>
+Date:   Thu Oct 26 14:26:19 2017 -0500
+
+    Add files via upload
+    
+    Initial upload of base framework for each individual publisher page
+
+commit fc453c6c48368f208c3a5e7350b50e398b928a68
+Author: Cameron <cameronwalsh@utexas.edu>
+Date:   Thu Oct 26 14:24:05 2017 -0500
+
+    New CSS to fix table orientation
+
+commit aac815c60614ae706bed4a4f7cbc419ed690ff6f
+Author: Cameron <cameronwalsh@utexas.edu>
+Date:   Thu Oct 26 14:10:42 2017 -0500
+
+    New instance pages with fixed CSS
+
+commit bbfbcc8aa34f3f58e42aad865263bc9db7978b49
+Author: Cameron <cameronwalsh@utexas.edu>
+Date:   Thu Oct 26 13:43:06 2017 -0500
+
+    Book pages with Bootstrap navbar
+
+commit 621d55db17b2d7169038e4cabf5599a70dc4f33a
+Author: Cameron <cameronwalsh@utexas.edu>
+Date:   Thu Oct 26 13:36:55 2017 -0500
+
+    New model pages with fixed navbars
+
+commit fc11d0fcff92d28549d6e1e745fdb5cadffc4a88
+Author: Cameron <cameronwalsh@utexas.edu>
+Date:   Thu Oct 26 13:34:53 2017 -0500
+
+    New Authors pages with Bootstrap
+
+commit 06f6088da1e942900502167bc4d1649540d481f6
+Author: Cameron <cameronwalsh@utexas.edu>
+Date:   Thu Oct 26 13:27:40 2017 -0500
+
+    New model pages with Bootstrap
+
+commit 2dc0e5d8faa6fe013fd36b5b42eab1fcb3b28f5d
+Author: Cameron <cameronwalsh@utexas.edu>
+Date:   Thu Oct 26 13:19:16 2017 -0500
+
+    New About Us page with cleaner code
+
+commit b9ac05c3c98eaa6e4afcffd0f4b1bafe06705df5
+Author: Cameron <cameronwalsh@utexas.edu>
+Date:   Thu Oct 26 12:58:23 2017 -0500
+
+    About Us with Bootstrap, customization
+
+commit 1881f4b8e627914797aca66e8851cf68776a16ae
+Merge: 8279018 694b327
+Author: Cameron <cameronwalsh@utexas.edu>
+Date:   Thu Oct 26 12:33:06 2017 -0500
+
+    Merge branch 'master' of https://github.com/juandigomez/cs329e-idb
+
+commit 8279018b5364f48a4c327ae4cd0e8855a17af453
+Author: Cameron <cameronwalsh@utexas.edu>
+Date:   Thu Oct 26 12:32:43 2017 -0500
+
+    New About Us page with Bootstrap
+
+commit ec4a1e6259a116384e9ddc0dcfccc8ae136966db
+Author: Cameron <cameronwalsh@utexas.edu>
+Date:   Thu Oct 26 12:29:31 2017 -0500
+
+    About Us page with Bootstrap
+
+commit 694b3271924e150627bda16a6f3ceb8b3c990ba8
+Author: Zach Quinlan <z.quinlan96@utexas.edu>
+Date:   Thu Oct 26 09:44:40 2017 -0500
+
+    Updated about us page - added Robert
+
+commit 0426da8c9acc5916e1cd9363b84c537f1f46e0fd
+Merge: 00c7fab ff1ae83
+Author: Zach Quinlan <z.quinlan96@utexas.edu>
+Date:   Thu Oct 26 09:43:17 2017 -0500
+
+    Merge branch 'master' of https://github.com/juandigomez/cs329e-idb
+
+commit 00c7fabbf1c9d5669d7c122f5e6faef862711807
+Author: Zach Quinlan <z.quinlan96@utexas.edu>
+Date:   Thu Oct 26 09:42:36 2017 -0500
+
+    updated about us page
+
+commit 46b4ac4cfe3366d4a24be987e7730defaf765486
+Author: Zach Quinlan <z.quinlan96@utexas.edu>
+Date:   Thu Oct 26 09:40:40 2017 -0500
+
+    updated about page
+
+commit ff1ae83de7a60d4cc079de3bda1f48718f7c996e
+Author: Cameron <cameronwalsh@utexas.edu>
+Date:   Thu Oct 26 09:39:41 2017 -0500
+
+    New pic sizes for about us page
+
+commit 196b37223bfa1dbfe903205b85788c6bca506511
+Author: Cameron <cameronwalsh@utexas.edu>
+Date:   Thu Oct 26 09:36:05 2017 -0500
+
+    About Us page with modified pictures
+
+commit f09c38842703b8373af2ccbe1954867a942484bb
+Author: Juan Gomez <j.david116@utexas.edu>
+Date:   Thu Oct 26 02:11:32 2017 -0500
+
+    Fixed app.py rendering of templates for publisher pages
+
+commit a67d0b960ffb0bd9c9af1b0b79b110a9ee35184b
+Merge: 5b385b9 e87d470
+Author: Juan Gomez <j.david116@utexas.edu>
+Date:   Thu Oct 26 02:06:40 2017 -0500
+
+    Merge branch 'master' of https://github.com/juandigomez/cs329e-idb
+
+commit 5b385b9e432f73c4c527aceaabf8146e7e0cfd11
+Author: Juan Gomez <j.david116@utexas.edu>
+Date:   Thu Oct 26 02:06:18 2017 -0500
+
+    Modified links in books and authors pages
+
+commit e87d470a13d2bd33f2280fb5c9c59e7e914cd88c
+Author: danieljsmarda <danieljsmarda@gmail.com>
+Date:   Thu Oct 26 01:57:11 2017 -0500
+
+    Commented app.py, added publisher routes
+
+commit ffa33378051a8b9ab83b8d07fb31416b488e1ae2
+Author: danieljsmarda <danieljsmarda@gmail.com>
+Date:   Thu Oct 26 01:52:10 2017 -0500
+
+    Removed unnecessary comments in app.py
+
+commit bce00826f70eb0cd221fd75a02663aef92081037
+Author: danieljsmarda <danieljsmarda@gmail.com>
+Date:   Thu Oct 26 01:49:33 2017 -0500
+
+    Added hyperlinks from Books page to individual book pages
+
+commit da2c03b119f8f62873a761392f4875605c840b99
+Author: danieljsmarda <danieljsmarda@gmail.com>
+Date:   Thu Oct 26 01:43:11 2017 -0500
+
+    Added Goldenhand and Restaurant pages
+
+commit 1e3d6030d8348bf2bd579d832f902dac97182dd5
+Author: danieljsmarda <danieljsmarda@gmail.com>
+Date:   Thu Oct 26 01:29:51 2017 -0500
+
+    Updated publisher hyperlink in endersgame.html
+
+commit efacc8b04232faa8af97b530b0f5929891f24315
+Author: Cameron <cameronwalsh@utexas.edu>
+Date:   Thu Oct 26 00:32:50 2017 -0500
+
+    Cleaned code for model pages
+
+commit 262f91eb5ed7d811c16e43a4b13c8aa3173b6c94
+Author: Cameron <cameronwalsh@utexas.edu>
+Date:   Thu Oct 26 00:28:05 2017 -0500
+
+    New app.py to fix Nix link
+
+commit e778fc521fbbdf7175ae80b60daed411ae05fdda
+Author: danieljsmarda <danieljsmarda@gmail.com>
+Date:   Thu Oct 26 00:26:08 2017 -0500
+
+    Linked Ender's Game to author page
+
+commit 474317e9f802f58774dff24e25c8310a3ac4ec6c
+Author: Cameron <cameronwalsh@utexas.edu>
+Date:   Thu Oct 26 00:21:30 2017 -0500
+
+    Fixed link to Nix author page
+
+commit e13499e85e6a897d5920ff8ff2fb5c522f6571fe
+Author: Cameron <cameronwalsh@utexas.edu>
+Date:   Thu Oct 26 00:19:23 2017 -0500
+
+    Switched author to Nix
+
+commit 3fb859e1ad6dc65caf267c3f0a2247cb7c5b9a62
+Author: Cameron <cameronwalsh@utexas.edu>
+Date:   Thu Oct 26 00:15:59 2017 -0500
+
+    Fixed typo in Publishers page
+
+commit db520a9853ea191c6b62630b9876c23ae93f98da
+Author: Cameron <cameronwalsh@utexas.edu>
+Date:   Thu Oct 26 00:10:34 2017 -0500
+
+    New model pages
+
+commit 6e58a159242438869e0f77073f683a0af10211a0
+Author: Cameron <cameronwalsh@utexas.edu>
+Date:   Thu Oct 26 00:09:33 2017 -0500
+
+    Updated About Us Page
+
+commit 30dd4d284f012ef1f0c66e64e846658166d5ddbf
+Author: danieljsmarda <danieljsmarda@gmail.com>
+Date:   Thu Oct 26 00:02:38 2017 -0500
+
+    Added endersgame.html
+
+commit 215843edeff8114b4b97872df353499b73461f49
+Author: Cameron <cameronwalsh@utexas.edu>
+Date:   Wed Oct 25 23:21:20 2017 -0500
+
+    Fixed Books page
+
+commit 62b3701d805c4086de8c7446f5ad2b9667f73055
+Author: Cameron <cameronwalsh@utexas.edu>
+Date:   Wed Oct 25 23:19:23 2017 -0500
+
+    Fixed Books page
+
+commit 95a6926d51bfd262517216d4e5d74c9f0baf1feb
+Author: Cameron <cameronwalsh@utexas.edu>
+Date:   Wed Oct 25 23:14:09 2017 -0500
+
+    New Books page to match models
+
+commit e0f1a124473f253e17a0f69394f9bf103e7e4d7a
+Author: Cameron <cameronwalsh@utexas.edu>
+Date:   Wed Oct 25 23:06:08 2017 -0500
+
+    Authors page with navbar
+
+commit 45d73adbb10fb35c63b04307e47d263c60863a4b
+Author: Juan Gomez <j.david116@utexas.edu>
+Date:   Wed Oct 25 22:59:40 2017 -0500
+
+    Added GCP deployable code. DO NOT EDIT app.yaml
+
+commit 0834f73786a1de2c33c8e01ed82560db9d768200
+Author: Cameron <cameronwalsh@utexas.edu>
+Date:   Wed Oct 25 22:53:18 2017 -0500
+
+    Updated Authors page with functioning JavaScript
+
+commit 352b1da5f2084f7934e88897a19749dfed2405b9
+Author: Cameron <cameronwalsh@utexas.edu>
+Date:   Wed Oct 25 22:47:24 2017 -0500
+
+    New Authors page with JavaScript
+
+commit a8e7f8e492b8bf5695d2fd3b2042b0aa18efcec6
+Author: ZachQuinlan <z.quinlan96@utexas.edu>
+Date:   Wed Oct 25 22:18:26 2017 -0500
+
+    Fixed id/CSS issue
+
+commit 5df86ec9ee7bf6180a4065cab045798194922c87
+Author: Cameron <cameronwalsh@utexas.edu>
+Date:   Wed Oct 25 22:14:44 2017 -0500
+
+    New Authors page
+
+commit 54e981dd20531c102bcf42a61ae7871b9b85f9bf
+Author: ZachQuinlan <z.quinlan96@utexas.edu>
+Date:   Wed Oct 25 22:09:31 2017 -0500
+
+    Fixed Issue with Script not ending
+
+commit 756bb633f9e2d02c695639949e2d4db68b71da36
+Author: Zach Quinlan <z.quinlan96@utexas.edu>
+Date:   Wed Oct 25 22:00:34 2017 -0500
+
+    Updated books page - added table and sorting
+
+commit 65e9ec8d0ecac69fbb4b2d832e363b303f8bce05
+Merge: 858c5b4 ac05fe2
+Author: danieljsmarda <danieljsmarda@gmail.com>
+Date:   Wed Oct 25 21:14:21 2017 -0500
+
+    Merge branch 'master' of https://github.com/juandigomez/cs329e-idb
+    
+    "Changed Juan.JPG to Juan.jpg"
+
+commit 858c5b4efcb738a587ed7f622f676514b4e415b8
+Author: danieljsmarda <danieljsmarda@gmail.com>
+Date:   Wed Oct 25 21:13:47 2017 -0500
+
+    Changed Juan's .JPG to .jpg
+
+commit ac05fe281c50dc33026e63d0347de56387c9dd52
+Author: Cameron <cameronwalsh@utexas.edu>
+Date:   Wed Oct 25 21:06:40 2017 -0500
+
+    Updated About Us page featuring Cameron
+
+commit 06d556c30420ae1f6414b6dd6ce55aa6e34c8545
+Author: Cameron <cameronwalsh@utexas.edu>
+Date:   Wed Oct 25 20:58:13 2017 -0500
+
+    pic of cameron
+
+commit 448017193c0f7b2bb04b0dc3be31f3dc1e059baf
+Author: Juan Gomez <j.david116@utexas.edu>
+Date:   Wed Oct 25 13:13:01 2017 -0500
+
+    Added all authors pages and updated main authors page for testing purposes
+
+commit c784704230e76ffcae584244b3dabe6394653a32
+Author: Juan Gomez <j.david116@utexas.edu>
+Date:   Wed Oct 25 10:11:29 2017 -0500
+
+    Removed Author image from images folder
+
+commit 8614970130dbc2cc1d1a0a91c8ce682f7d072d09
+Author: Juan Gomez <j.david116@utexas.edu>
+Date:   Wed Oct 25 10:09:30 2017 -0500
+
+    Added two of the authors pages
+
+commit 3762d06c2352bc85d455913b4afdafcf41754728
+Author: Juan Gomez <j.david116@utexas.edu>
+Date:   Wed Oct 25 00:52:56 2017 -0500
+
+    Updated aboutus page
+
+commit 107df03a48606043bb7f85b014b55bd37bd1dd96
+Author: danieljsmarda <danieljsmarda@gmail.com>
+Date:   Tue Oct 24 22:29:59 2017 -0500
+
+    Fixed static file cache bug
+
+commit 3e6cb6783b3fb6b701a1bf26c552122dfefa9fb2
+Author: Zach Quinlan <z.quinlan96@utexas.edu>
+Date:   Tue Oct 24 22:17:54 2017 -0500
+
+    About us page updated
+
+commit 122962b881faf46dc21135d9b7385a0d6871b2ee
+Author: danieljsmarda <danieljsmarda@gmail.com>
+Date:   Tue Oct 24 20:24:47 2017 -0500
+
+    updated url path in layout.css
+
+commit 1b849b6e679c0671ebad7922c9860e9c3dc7e8da
+Author: Juan Gomez <j.david116@utexas.edu>
+Date:   Tue Oct 24 20:02:08 2017 -0500
+
+    Updated web pages
+
+commit 773e372ddaddb127832856bdb40b280661ec8470
+Author: Juan Gomez <j.david116@utexas.edu>
+Date:   Tue Oct 24 17:49:11 2017 -0500
+
+    Updated app.py
+
+commit 75e3ed9518a921365d7ce7fcba7e30d7fbf1e8e9
+Author: Daniel Smarda <danieljsmarda@gmail.com>
+Date:   Tue Oct 24 17:36:25 2017 -0500
+
+    Update aboutus() function
+
+commit f3ebbc6a92c0539d3a51fa205934b12178789225
+Author: ZachQuinlan <z.quinlan96@utexas.edu>
+Date:   Tue Oct 24 16:20:31 2017 -0500
+
+    3rd time's the charm
+
+commit 94724adf1e733fa1748814dff50d9894a0c7cbbc
+Author: ZachQuinlan <z.quinlan96@utexas.edu>
+Date:   Tue Oct 24 16:18:40 2017 -0500
+
+    index link changed
+
+commit 2270d7a4bf5c89a24f6eb4fc17441588ab209d1c
+Author: ZachQuinlan <z.quinlan96@utexas.edu>
+Date:   Tue Oct 24 16:17:30 2017 -0500
+
+    Fixed index page link
+
+commit d3224123a25727f24ccb55c187de18c66ca732a4
+Author: Juan Gomez <j.david116@utexas.edu>
+Date:   Tue Oct 24 15:46:40 2017 -0500
+
+    Flask and SQL alchemy installed in virtual environment
+
+commit 4cefd4b6186bcc60cf67e9cf02f54b5ab68957f5
+Author: Juan Gomez <j.david116@utexas.edu>
+Date:   Tue Oct 24 15:20:31 2017 -0500
+
+    Added virtual environment
+
+commit 678cd0938244bc46edfc6a3273cd9bd4616d966e
+Author: ZachQuinlan <z.quinlan96@utexas.edu>
+Date:   Tue Oct 24 15:09:36 2017 -0500
+
+    Added about page and fixed link to css
+
+commit 9a761961be72d8e43927f9f7c6056fde5e51f9a0
+Author: ZachQuinlan <z.quinlan96@utexas.edu>
+Date:   Tue Oct 24 15:04:16 2017 -0500
+
+    Edited URL to use images in static folder
+
+commit 822385aa14e3af1fb8caf06c1da82a72798ea138
+Author: ZachQuinlan <z.quinlan96@utexas.edu>
+Date:   Tue Oct 24 15:00:40 2017 -0500
+
+    Added static folder
+
+commit 0b2c3513fdee634bd446e16a81084b85ca35321a
+Author: ZachQuinlan <z.quinlan96@utexas.edu>
+Date:   Tue Oct 24 14:52:50 2017 -0500
+
+    Added splash/index page
+
+commit 9b00ab9ef08732a1dc779f209f14a66fef63a6d7
+Author: danieljsmarda <danieljsmarda@gmail.com>
+Date:   Tue Oct 24 14:49:49 2017 -0500
+
+    Added base app framework
+
+commit 2a501cfac2e78f56daf42ea62b96545d717e1e33
+Author: danieljsmarda <danieljsmarda@gmail.com>
+Date:   Tue Oct 24 14:47:29 2017 -0500
+
+    Modified Readme
+
+commit 033b620565ceffc4d2011c458926b4dee70aabb4
+Author: juandigomez <j.david116@utexas.edu>
+Date:   Tue Oct 24 14:22:12 2017 -0500
+
+    Initial commit
