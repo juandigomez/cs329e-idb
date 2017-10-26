@@ -29,9 +29,9 @@ def authors():
 def publishers():
 	return render_template('publishers.html')
 	
-@app.route('/authors-Brandon_Sanderson/')
-def sanderson():
-	return render_template('sanderson.html')
+@app.route('/authors-Garth_Nix/')
+def nix():
+	return render_template('nix.html')
 	
 @app.route('/authors-Orson_Scott_Card/')
 def card():
