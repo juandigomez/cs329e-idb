@@ -41,6 +41,7 @@ def card():
 def adams():
 	return render_template('adams.html')
 
+
 def static_file_hash(filename):
   return int(os.stat(filename).st_mtime)
 
@@ -86,7 +87,7 @@ def hashed_url_for_static_file(endpoint, values):
 
             values[param_name] = static_file_hash(os.path.join(static_folder, filename))
 
-            
+   
 
 
 	
