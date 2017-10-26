@@ -9,14 +9,68 @@
 	<h1 id="splash">
 		Authors
 	</h1>
-	<div class="center">
-		<a href="{{url_for('sanderson')}}" class="splash">Brandon Sanderson</a>
-	</div>
-	<div class="center">
-		<a href="{{url_for('card')}}" class="splash">Orson Scott Card</a>
-	</div>
-	<div class="center">
-		<a href="{{url_for('adams')}}" class="splash">Douglas Adams</a>
-	</div>
+	<table BORDER = "2">
+		<tr>
+			<th onclick = "sortTable(0, 0)">Author Name</th>
+			<th onclick = "sortTable(1, 0)">Date of Birth</th>
+			<th onclick = "sortTable(2, 0)">Alma Mater</th>
+			<th onclick = "sortTable(3, 0)">Nationality</th>
+			<th onclick = "sortTable(4, 0)">Book</th>
+		</tr>
+		<tr>
+			<td><a href = "{{url_for('adams')}}">Douglas Adams</a></td>
+			<td>March 11, 1952</td>
+			<td>Cambridge University</td>
+			<td>English</td>
+			<td>The Restaurant at the End of the Universe</td>
+		</tr>
+		<tr>
+			<td><a href = "{{url_for('card')}}">Orson Scott Card</a></td>
+			<td>August 24, 1951</td>
+			<td>Brigham Young University</td>
+			<td>American</td>
+			<td>Ender's Game</td>
+		</tr>
+		<tr>
+			<td><a href = "{{url_for('sanderson')}}">Brandon Sanderson</a></td>
+			<td>December 19, 1975</td>
+			<td>Brigham Young University</td>
+			<td>American</td>
+			<td>The Way of Kings</td>
+		</tr>
+	<script type="text/javascript">
+	function sortTable(col, n){
+		var table = document.getElementById("booksTable");
+		var direction = n; //1 = descending, 0 = ascending
+		var notSorted = true;
+		var needSwitch = false;
+		while(notSorted){
+			var rows = table.getElementsByTagName("TR");
+			var i;
+			for(i = 1; i < rows.length - 1; i++){
+				var curr = rows[i].getElementsByTagName("TD")[col];
+				var comp = rows[i+1].getElementsByTagName("TD")[col];
+				if(direction == 0){
+					if(curr.innerHTML.toLowerCase() > comp.innerHTML.toLowerCase()){
+						needSwitch = true;
+						break;
+					}
+				}
+				else{
+					if(curr.innerHTML.toLowerCase() < comp.innerHTML.toLowerCase()){
+						needSwitch = true;
+						break;
+					}
+				}
+			}
+			if(needSwitch){
+				rows[i].parentNode.insertBefore(rows[i+1], rows[i]);
+			}
+			else{
+				notSorted = false;
+			}
+		}
+	}
+	</script>
 </body>
 </html>
