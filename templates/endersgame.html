@@ -8,6 +8,12 @@
 
     <title>Ender's Game</title>
 
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+  	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  	
+  	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	
 	<link rel = "STYLESHEET" href="{{ url_for('static',filename='css/layout.css') }}" type="text/css"/>
 
   </head>
@@ -16,22 +22,22 @@
 
   <body>
 
-	<div id="nav">
-
-		<ul id="navbar">
-
+	<div class = "container">
+	
+		<ul class = "nav nav-tabs nav-fill">
+	
 			<li><a href="{{url_for('index')}}">Home</a></li>
-
+	
 			<li><a href="{{url_for('aboutus')}}">About Us</a></li>
-
+	
 			<li><a href="{{url_for('books')}}">Books</a></li>
-
+	
 			<li><a href="{{url_for('authors')}}">Authors</a></li>
-
+	
 			<li><a href="{{url_for('publishers')}}">Publishers</a></li>
-
+	
 		</ul>
-
+	
 	</div>
 
   <div class="center">	
