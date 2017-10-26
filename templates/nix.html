@@ -1,0 +1,33 @@
+<!DOCTYPE HTML>
+
+<html> 
+  <head>
+    <title>Garth Nix</title>
+	<link rel = "STYLESHEET" href="{{ url_for('static',filename='css/layout.css') }}" type="text/css"/>
+  </head>
+
+  <body>
+	<div id="nav">
+		<ul id="navbar">
+			<li><a href="{{url_for('index')}}">Home</a></li>
+			<li><a href="{{url_for('aboutus')}}">About Us</a></li>
+			<li><a href="{{url_for('books')}}">Books</a></li>
+			<li><a href="{{url_for('authors')}}">Authors</a></li>
+			<li><a href="{{url_for('publishers')}}">Publishers</a></li>
+		</ul>
+	</div>
+  <div class="center">	
+	<h1>Garth Nix</h1>
+	<hr>
+	<img src= "http://upload.wikimedia.org/wikipedia/commons/thumb/9/95/Garth_nix_2012.jpg/250px-Garth_nix_2012.jpg">
+	<p>
+		Garth Richard Nix is an Australian writer who specialises in children's and young adult fantasy novels, notably the Old Kingdom, Seventh Tower and Keys to the Kingdom series.
+	</p>
+	<p>Born: July 19, 1963</p>
+	<p>Nationality: Australian</p>
+	<p>Alma Mater: University of Canberra</p>
+	<a href="https://en.wikipedia.org/wiki/Garth_Nix">Wikipedia</a>
+	<hr/>
+  </div>
+  </body>
+</html>
