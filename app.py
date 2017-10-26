@@ -62,9 +62,9 @@ def goldenhand():
 def palgravemacmillan():
     return render_template('palgravemacmillan.html')
 
-@app.route('/publishers-Del_Ray_Books/')
+@app.route('/publishers-Del_Rey_Books/')
 def delraybooks():
-    return render_template('delraybooks.html')
+    return render_template('delreybooks.html')
 
 @app.route('/publishers-Allen_and_Unwin/')
 def allenandunwin():
