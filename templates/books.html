@@ -13,6 +13,7 @@
 			while(notSorted){
 				var rows = table.getElementsByTagName("TR");
 				var i;
+				needSwitch = false;
 				for(i = 1; i < rows.length - 1; i++){
 					var curr = rows[i].getElementsByTagName("TD")[col];
 					var comp = rows[i+1].getElementsByTagName("TD")[col];
