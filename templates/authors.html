@@ -62,10 +62,16 @@
 	</script>
 </head>
 <body>
-	<title>Project 3 idb</title>
-	<h1 id = "pageTitle">
-		Authors
-	</h1>
+	<div id="nav">
+		<ul id="navbar">
+			<li><a href="{{url_for('index')}}">Home</a></li>
+			<li><a href="{{url_for('aboutus')}}">About Us</a></li>
+			<li><a href="{{url_for('books')}}">Books</a></li>
+			<li><a href="{{url_for('authors')}}">Authors</a></li>
+			<li><a href="{{url_for('publishers')}}">Publishers</a></li>
+		</ul>
+	</div>
+	<h1 id = "pageTitle">Authors</h1>
 	<table id = "authorsTable" BORDER = "2">
 		<tr>
 			<th onclick = "sortTable(0)">Author Name</th>
@@ -95,6 +101,5 @@
 			<td>American</td>
 			<td>The Way of Kings</td>
 		</tr>
-	<script type="text/javascript">
 </body>
 </html>
