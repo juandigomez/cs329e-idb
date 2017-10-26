@@ -7,7 +7,7 @@ div.center{
 	color: white;
 }
 
-#splash{
+#pageTitle{
 	font-size: 50px;
 	text-align: center;
 	color: white;
@@ -28,8 +28,28 @@ div a.splash{
 }
 
 body{
-	background-image: url("../images/texas.jpg");
+	background-color: rgb(0, 29, 76);
+}
+
+#splashBody{
 	background-attachment: fixed;
+	background-image: url("../images/texas.jpg");
+}
+
+table{
+	color:white;
+	column-count: 5;
+	font-size: 30px;
+	column-gap: 0px;
+	width: 100%;
+	border: 1px 1px 1px 1px;
+	border-color: white;
+	border-style: solid;
+	text-align: center;
+}
+
+#sort:hover{
+	cursor: pointer;
 }
 
 #nav{

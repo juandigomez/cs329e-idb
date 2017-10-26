@@ -1,6 +1,101 @@
 <!DOCTYPE html>
 <html>
 <head>
+	<link rel = "STYLESHEET" href="{{ url_for('static',filename='css/layout.css') }}" type="text/css"/> 
+	<link rel="stylesheet" type="text/css" href="../static/css/layout.css">
 	<title>Books</title>
+	<script type="text/javascript">
+		function sortTable(col, n){
+			var table = document.getElementById("booksTable");
+			var direction = n; //1 = descending, 0 = ascending
+			var notSorted = true;
+			var needSwitch = false;
+			while(notSorted){
+				var rows = table.getElementsByTagName("TR");
+				var i;
+				for(i = 1; i < rows.length - 1; i++){
+					var curr = rows[i].getElementsByTagName("TD")[col];
+					var comp = rows[i+1].getElementsByTagName("TD")[col];
+
+					if(direction == 0){
+						if(curr.innerHTML.toLowerCase() > comp.innerHTML.toLowerCase()){
+							needSwitch = true;
+							break;
+						}
+					}
+					else{
+						if(curr.innerHTML.toLowerCase() < comp.innerHTML.toLowerCase()){
+							needSwitch = true;
+							break;
+						}
+					}
+				}
+				if(needSwitch){
+					rows[i].parentNode.insertBefore(rows[i+1], rows[i]);
+				}
+				else{
+					notSorted = false;
+				}
+			}
+		}
+	</script>
 </head>
+<body>
+	<div id="nav">
+		<ul id="navbar">
+			<li><a href="{{url_for('index')}}">Home</a></li>
+			<li><a href="{{url_for('aboutus')}}">About Us</a></li>
+			<li><a href="{{url_for('books')}}">Books</a></li>
+			<li><a href="{{url_for('authors')}}">Authors</a></li>
+			<li><a href="{{url_for('publishers')}}">Publishers</a></li>
+		</ul>
+	</div>
+	<h1 id="pageTitle">Books</h1>
+	<hr/>
+	<table id="booksTable">
+		<tr>
+			<th>Title 
+				<button id="sort" onclick="sortTable(0, 0)">&uarr;</button>
+				<button id="sort" onclick="sortTable(0, 1)">&darr;</button>
+			</th>
+			<th>Author
+				<button id="sort" onclick="sortTable(1, 0)">&uarr;</button>
+				<button id="sort" onclick="sortTable(1, 1)">&darr;</button>
+			</th>
+			<th>ISBN
+				<button id="sort" onclick="sortTable(2, 0)">&uarr;</button>
+				<button id="sort" onclick="sortTable(2, 1)">&darr;</button>
+			</th>
+			<th>Publication Date
+				<button id="sort" onclick="sortTable(3, 0)">&uarr;</button>
+				<button id="sort" onclick="sortTable(3, 1)">&darr;</button>
+			</th>
+			<th>Google ID
+				<button id="sort" onclick="sortTable(4, 0)">&uarr;</button>
+				<button id="sort" onclick="sortTable(4, 1)">&darr;</button>
+			</th>
+		</tr>
+		<tr>
+			<td><a href="" style="text-decoration: underline">The Way of Kings</a></td>
+			<td>Brandon Sanderson</td>
+			<td>1429992808</td>
+			<td>2010-08-31</td>
+			<td>OHclhBVv-X4C</td>
+		</tr>
+		<tr>
+			<td><a href="" style="text-decoration: underline">Ender's Game</a></td>
+			<td>Orson Scott Card</td>
+			<td>0765317389</td>
+			<td>2006-10-31</td>
+			<td>Z5QtUpmbcDwC</td>
+		</tr>
+		<tr>
+			<td><a href="" style="text-decoration: underline">The Restaurant at the End of the Universe</a></td>
+			<td>Douglas Adams</td>
+			<td>0307497569</td>
+			<td>2008-12-24</td>
+			<td>DQ-wif7eBJoC</td>
+		</tr>
+	</table>
+</body>
 </html>
