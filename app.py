@@ -53,14 +53,14 @@ def restaurant():
 def goldenhand():
     return render_template('goldenhand.html')
 
-def static_file_hash(filename):
-  return int(os.stat(filename).st_mtime)
 
-
-# The following function handles caching problems
+# The following functions handle caching problems
 # that prevent the local host from displaying
 # the updated static files.
 # Pasted directly from https://gist.github.com/Ostrovski/f16779933ceee3a9d181
+def static_file_hash(filename):
+  return int(os.stat(filename).st_mtime)
+
 @app.url_defaults
 def hashed_url_for_static_file(endpoint, values):
 
@@ -99,13 +99,6 @@ def hashed_url_for_static_file(endpoint, values):
             values[param_name] = static_file_hash(os.path.join(static_folder, filename))
 
    
-
-
-	
-# if app.py is run directly, i.e., as the main module, it will be assigned the value main # and if it's main go ahead and run the application. 
-# if this application is imported, then the __name__ is no longer __main__ and  
-# the code, app.run(), will not be executed 
-
 
 
 
