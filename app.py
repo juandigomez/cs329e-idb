@@ -120,11 +120,11 @@ def hashed_url_for_static_file(endpoint, values):
 
 
 # If deploying to GCP, uncomment the first if statement and comment out the second
-#if __name__ == '__main__':
- #   app.run(host='127.0.0.1', port=8080, debug=True)
+if __name__ == '__main__':
+    app.run(host='127.0.0.1', port=8080, debug=True)
 
 	
 #If Deploying locally, uncomment the second if statement and comment out the first
-if __name__ == "__main__":
-	app.run()
+#if __name__ == "__main__":
+	#app.run()
  
