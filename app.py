@@ -45,6 +45,13 @@ def adams():
 def endersgame():
     return render_template('endersgame.html')
 
+@app.route('/books-Restaurant/')
+def restaurant():
+    return render_template('restaurant.html')
+
+@app.route('/books-Goldenhand/')
+def goldenhand():
+    return render_template('goldenhand.html')
 
 def static_file_hash(filename):
   return int(os.stat(filename).st_mtime)
