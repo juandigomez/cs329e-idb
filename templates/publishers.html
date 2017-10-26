@@ -1,6 +1,106 @@
 <!DOCTYPE html>
 <html>
 <head>
+	<link rel = "STYLESHEET" href="{{ url_for('static',filename='css/layout.css') }}" type="text/css"/> 
+	<link rel="stylesheet" type="text/css" href="../static/css/layout.css">
 	<title>Publishers</title>
+	<script type="text/javascript">
+		function sortTable(n) {
+			var table, rows, switching, i, x, y, shouldSwitch, dir, switchcount = 0;
+			table = document.getElementById("publishersTable");
+			switching = true;
+			// Set the sorting direction to ascending:
+			dir = "asc"; 
+			/* Make a loop that will continue until
+			no switching has been done: */
+			while (switching) {
+				// Start by saying: no switching is done:
+				switching = false;
+				rows = table.getElementsByTagName("TR");
+				/* Loop through all table rows (except the
+				first, which contains table headers): */
+				for (i = 1; i < (rows.length - 1); i++) {
+					// Start by saying there should be no switching:
+					shouldSwitch = false;
+					/* Get the two elements you want to compare,
+					one from current row and one from the next: */
+					x = rows[i].getElementsByTagName("TD")[n];
+					y = rows[i + 1].getElementsByTagName("TD")[n];
+					/* Check if the two rows should switch place,
+					based on the direction, asc or desc: */
+					if (dir == "asc") {
+						if (x.innerHTML.toLowerCase() > y.innerHTML.toLowerCase()) {
+							// If so, mark as a switch and break the loop:
+							shouldSwitch= true;
+							break;
+						}
+					} else if (dir == "desc") {
+						if (x.innerHTML.toLowerCase() < y.innerHTML.toLowerCase()) {
+							// If so, mark as a switch and break the loop:
+							shouldSwitch= true;
+							break;
+						}
+					}
+				}
+				if (shouldSwitch) {
+					/* If a switch has been marked, make the switch
+					and mark that a switch has been done: */
+					rows[i].parentNode.insertBefore(rows[i + 1], rows[i]);
+					switching = true;
+					// Each time a switch is done, increase this count by 1:
+					switchcount ++; 
+				} else {
+					/* If no switching has been done AND the direction is "asc",
+					set the direction to "desc" and run the while loop again. */
+					if (switchcount == 0 && dir == "asc") {
+						dir = "desc";
+						switching = true;
+					}
+				}
+			}
+		}
+	</script>
 </head>
+<body>
+	<div id="nav">
+		<ul id="navbar">
+			<li><a href="{{url_for('index')}}">Home</a></li>
+			<li><a href="{{url_for('aboutus')}}">About Us</a></li>
+			<li><a href="{{url_for('books')}}">Books</a></li>
+			<li><a href="{{url_for('authors')}}">Authors</a></li>
+			<li><a href="{{url_for('publishers')}}">Publishers</a></li>
+		</ul>
+	</div>
+	<h1 id = "pageTitle">Publishers</h1>
+	<table id = "publishersTable" BORDER = "2">
+		<tr>
+			<th onclick = "sortTable(0)">Publisher Name</th>
+			<th onclick = "sortTable(1)">Website</th>
+			<th onclick = "sortTable(2)">Parent Company</th>
+			<th onclick = "sortTable(3)">Founding Year</th>
+			<th onclick = "sortTable(4)">Description</th>
+		</tr>
+		<tr>
+			<td><a href = "">Palgrave Macmillan</a></td>
+			<td><a href = "http://www.palgrave.com">http://www.palgrave.com</a></td>
+			<td>Springer Nature</td>
+			<td>2000</td>
+			<td>Palgrave Macmillan is an international academic and trade publishing company. Its programme includes textbooks, journals, monographs, professional and reference works in print and online.</td>
+		</tr>
+		<tr>
+			<td><a href = "">Del Rey Books</a></td>
+			<td><a href = "http://sf-fantasy.suvudu.com">http://sf-fantasy.suvudu.com</a></td>
+			<td>Random House</td>
+			<td>1977></td>
+			<td>Del Rey Books is a branch of Ballantine Books, which is owned by Random House and, in turn, by Penguin Random House. It is a separate imprint established in 1977 under the editorship of author Lester del Rey and his wife Judy-Lynn del Rey.</td>
+		</tr>
+		<tr>
+			<td><a href = "">Allen &amp; Unwin</a></td>
+			<td><a href = "http://allenandunwin.com">http://allenandunwin.com</a></td>
+			<td>N/A</td>
+			<td>1914 (British), 1976 (Australian)</td>
+			<td>Allen &amp; Unwin is an Australian independent publishing company, established in Australia in 1976 as a subsidiary of the British firm George Allen &amp; Unwin Ltd., which was founded by Sir Stanley Unwin in August 1914 and went on to become one of the leading publishers of the twentieth century.</td>
+		</tr>
+	</table>
+</body>
 </html>
