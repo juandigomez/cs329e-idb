@@ -1,10 +1,22 @@
 <!DOCTYPE HTML>
 <html>
 <head>
-	<link rel = "stylesheet" href = "{{ url_for('static',filename='css/layout.css') }}" type = "text/css">
-</head>
-<body id="splashBody">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+  	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="../static/css/layout.css">
 	<title>Project 3 idb</title>
+</head>
+<body id="bootstrapBody">
+	<div class = "container my-5">
+		<ul class = "nav nav-tabs nav-fill">
+			<li class = "active"><a href="{{url_for('index')}}">Home</a></li>
+			<li><a href="{{url_for('aboutus')}}">About Us</a></li>
+			<li><a href="{{url_for('books')}}">Books</a></li>
+			<li><a href="{{url_for('authors')}}">Authors</a></li>
+			<li><a href="{{url_for('publishers')}}">Publishers</a></li>
+		</ul>
+	</div>
 	<h1 id="pageTitle">
 		Welcome to our website!
 	</h1>
