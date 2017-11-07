@@ -66,6 +66,16 @@
 			<th onclick = "sortTable(3)">Publication Date</th>
 			<th onclick = "sortTable(4)">Google ID</th>	
 		</tr>
+		{% for i in books %}
+			<tr>
+				<td><a href="{{url_for('books/{{i.id}}')}}">{{i.title}}</a></td>
+				<td>{{i.author}}</td>
+				<td>{{i.isbn}}</td>
+				<td>{{i.publication_date}}</td>
+				<td>{{i.google_id}}</td>
+			</tr>
+		{% endfor %}
+		<!--
 		<tr>
 			<td><a href="../books-Goldenhand/"><i>Goldenhand</i></a></td>
 			<td><a href="../authors-Garth_Nix/">Garth Nix</a></td>
@@ -86,7 +96,7 @@
 			<td>0307497569</td>
 			<td>December 24, 2008</td>
 			<td>DQ-wif7eBJoC</td>
-		</tr>
+		</tr>  -->
 	</table>
 </body>
 </html>

@@ -61,9 +61,19 @@
 			<th onclick = "sortTable(0)">Publisher Name</th>
 			<th onclick = "sortTable(1)">Website</th>
 			<th onclick = "sortTable(2)">Parent Company</th>
-			<th onclick = "sortTable(3)">Founding Year</th>
+			<th onclick = "sortTable(3)">Wikipedia URL</th>
 			<th onclick = "sortTable(4)">Description</th>
 		</tr>
+		{% for i in books %}
+			<tr>
+				<td><a href="{{url_for('publishers/{{i.id}}')}}">{{i.name}}</a></td>
+				<td><a href="{{i.website}}">{{i.website}}</a></td>
+				<td>{{i.owner}}</td>
+				<td>{{i.wiki}}</td>
+				<td>{{i.description}}</td>
+			</tr>
+		{% endfor %}
+		<!--
 		<tr>
 			<td><a href = "{{url_for('palgravemacmillan')}}">Palgrave Macmillan</a></td>
 			<td><a href = "http://www.palgrave.com">http://www.palgrave.com</a></td>
@@ -85,6 +95,7 @@
 			<td>1914 (British), 1976 (Australian)</td>
 			<td>Allen &amp; Unwin is an Australian independent publishing company, established in Australia in 1976 as a subsidiary of the British firm George Allen &amp; Unwin Ltd., which was founded by Sir Stanley Unwin in August 1914 and went on to become one of the leading publishers of the twentieth century.</td>
 		</tr>
+		-->
 	</table>
 </body>
 </html>

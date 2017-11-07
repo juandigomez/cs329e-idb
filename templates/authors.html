@@ -62,8 +62,18 @@
 			<th onclick = "sortTable(1)">Date of Birth</th>
 			<th onclick = "sortTable(2)">Alma Mater</th>
 			<th onclick = "sortTable(3)">Nationality</th>
-			<th onclick = "sortTable(4)">Book</th>
+			<th onclick = "sortTable(4)">Education</th>
 		</tr>
+		{% for i in authors %}
+			<tr>
+				<td><a href="{{url_for('authors/{{i.id}}')}}">{{i.name}}</a></td>
+				<td>{{i.born}}</td>
+				<td>{{i.alma_mater}}</td>
+				<td>{{i.nationality}}</td>
+				<td>{{i.education}}</td>
+			</tr>
+		{% endfor %}
+		<!--
 		<tr>
 			<td><a href="../authors-Douglas_Adams/">Douglass Adams</a></td>
 			<td>March 11, 1952</td>
@@ -84,6 +94,6 @@
 			<td>University of Canberra</td>
 			<td>Australian</td>
 			<td><a href="../books-Goldenhand/"><i>Goldenhand</i></a></td>
-		</tr>
+		</tr>-->
 </body>
 </html>
