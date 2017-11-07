@@ -5,7 +5,7 @@ import json, logging
 # import the following dependencies from SQLAlchmey
 # and the empty database we created into our environment 
 from sqlalchemy.orm import sessionmaker
-from models import Base, Book, engine
+from models import Base, Book, Author, Publisher, engine
 
 # bind the engine to the base class. This makes the connection
 # between our class definitions and the corresponding tables 
@@ -36,17 +36,21 @@ def load_json(filename):
 
 def create_books():
     book = load_json('books.json')
+    id_count = 0
 
-    for oneBook in book:
+    for oneBook in book['Books']:
         title = oneBook['title']
-        isbn = oneBook['isbn']
-        publication_date = oneBook['publication_date']
+        if 'isbn' in oneBook:
+            isbn = oneBook['isbn']
+        if 'publication_date' in oneBook:
+            publication_date = oneBook['publication_date']
         google_id = oneBook['google_id']
-        author = oneBook['authors']['name']
+        name = oneBook['authors'][0]['name']
         image = oneBook['image_url']
-        description = oneBook['description']
+        if 'description' in oneBook:
+            description = oneBook['description']
 		
-        newBook = Book(title = title, id = id_count, isbn = isbn, author = author, publication_date = publication_date, google_id = google_id,image = image, description = description)
+        newBook = Book(description = description, image = image, author = name, google_id = google_id, publication_date = publication_date, isbn = isbn, title = title, id = id_count)
 		# After I create the book, I can then add it to my session. 
         session.add(newBook)
 		# commit the session to my DB.
@@ -54,17 +58,26 @@ def create_books():
         id_count += 1
 
 def create_authors():
-    author = load_json('books.json')
+    book = load_json('books.json')
+    id_count = 0
 
-    for oneBook in author:
-        born = oneBook['authors']['born']
-        name = oneBook['authors']['name']
-        education = oneBook['authors']['education']
-        nationality = oneBook['authors']['nationality']
-        description = oneBook['authors']['description']
-        alma_mater = oneBook['authors']['alma_mater']
-        wiki = oneBook['authors']['wikipedia_url']
-        image = oneBook['authors']['image_url']
+    for oneBook in book['Books']:
+        oneAuthor = oneBook['authors'][0]
+        if 'born' in oneAuthor:
+            born = oneAuthor['born']
+        name = oneAuthor['name']
+        if 'education' in oneAuthor:
+            education = oneAuthor['education']
+        if 'nationality' in oneAuthor:
+            nationality = oneAuthor['nationality']
+        if 'description' in oneAuthor:
+            description = oneAuthor['description']
+        if 'alma_mater' in oneAuthor:
+            alma_mater = oneAuthor['alma_mater']
+        if 'wikipedia_url' in oneAuthor:
+            wiki = oneAuthor['wikipedia_url']
+        if 'image_url' in oneAuthor:
+            image = oneAuthor['image_url']
 
         newAuthor = Author(born = born, name = name, education = education, nationality = nationality, description = description, alma_mater = alma_mater, wiki = wiki, image = image, id = id_count)
 
@@ -73,16 +86,22 @@ def create_authors():
         id_count += 1
 
 def create_publisher():
-    publisher = load_json('books.json')
+    book = load_json('books.json')
+    id_count = 0
 
-    for oneBook in publisher:
-        publisher_item = oneBook['publishers']
-        name = publisher_item['name']
-        wiki = publisher_item['wikipedia_url']
-        description = publisher_item['description']
-        owner = publisher_item['owner']
-        image = publisher_item['image_url']
-        website = publisher_item['website']
+    for oneBook in book['Books']:
+        onePublisher = oneBook['publishers'][0]
+        name = onePublisher['name']
+        if 'wikipedia_url' in onePublisher:
+            wiki = onePublisher['wikipedia_url']
+        if 'description' in onePublisher:
+            description = onePublisher['description']
+        if 'owner' in onePublisher:
+            owner = onePublisher['owner']
+        if 'image_url' in onePublisher:
+            image = onePublisher['image_url']
+        if 'website' in onePublisher:
+            website = onePublisher['website']
 
         newPublisher = Publisher(name = name, wiki = wiki, description = description, owner = owner, image = image, website = website, id = id_count)
 

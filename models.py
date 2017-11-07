@@ -25,36 +25,36 @@ Base = declarative_base()
 
 class Book(Base):
 	__tablename__ = 'book'
-	title = Column(String(80), nullable = False)
-	id = Column(Integer, primary_key = True)
-	isbn = Column(String(80), nullable = False)
-	author = Column(String(80), nullable = False)
-	publication_date = Column(String(80), nullable = False)
-	google_id = Column(String(80), nullable = False)
-	image = Column(String(2048), nullable = False)
-	description = Column(String(2048))
+	title = Column(String(3000), nullable = False)
+	id = Column(Integer, primary_key = True, nullable = False)
+	isbn = Column(String(3000))
+	author = Column(String(3000))
+	publication_date = Column(String(3000))
+	google_id = Column(String(3000))
+	image = Column(String(3000))
+	description = Column(String(5000))
 
 class Author(Base):
 	__tablename__ = 'author'
-	name = Column(String(80), nullable = False)
-	id = Column(Integer, primary_key = True)
-	born = Column(String(80), nullable = False)
-	education = Column(String(80))
-	nationality = Column(String(80))
-	description = Column(String(2048))
-	alma_mater = Column(String(80))
-	wiki = Column(String(2048))
-	image = Column(String(2048))
+	name = Column(String(3000), nullable = False)
+	id = Column(Integer, primary_key = True, nullable = False)
+	born = Column(String(3000))
+	education = Column(String(3000))
+	nationality = Column(String(3000))
+	description = Column(String(5000))
+	alma_mater = Column(String(3000))
+	wiki = Column(String(3000))
+	image = Column(String(3000))
 
 class Publisher(Base):
 	__tablename__ = 'publisher'
-	name = Column(String(80), nullable = False)
-	wiki = Column(String(2048))
-	id = Column(Integer, primary_key = True)
-	description = Column(String(2048))
-	owner = Column(String(80))
-	image = Column(String(2048))
-	website = Column(String(2048))
+	name = Column(String(3000))
+	wiki = Column(String(3000))
+	id = Column(Integer, primary_key = True, nullable = False)
+	description = Column(String(5000))
+	owner = Column(String(3000))
+	image = Column(String(3000))
+	website = Column(String(3000))
 	
 
 
