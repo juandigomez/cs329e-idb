@@ -1,0 +1,33 @@
+<!DOCTYPE HTML>
+
+<html> 
+  <head>
+    <title>{{author.name}}</title>
+	<link rel = "STYLESHEET" href="{{ url_for('static',filename='css/layout.css') }}" type="text/css"/>
+  </head>
+
+  <body id="bootstrapBody">
+	<div id="nav">
+		<ul id="navbar">
+			<li><a href="{{url_for('index')}}">Home</a></li>
+			<li><a href="{{url_for('aboutus')}}">About Us</a></li>
+			<li><a href="{{url_for('books')}}">Books</a></li>
+			<li><a href="{{url_for('authors')}}">Authors</a></li>
+			<li><a href="{{url_for('publishers')}}">Publishers</a></li>
+		</ul>
+	</div>
+  <div class="center">	
+	<h1>{{author.name}}</h1>
+	<hr>
+	<img src= "{{author.image}}">
+	<p>
+		{{author.description}}
+	</p>
+	<p>Born: {{author.born}}</p>
+	<p>Nationality: {{author.nationality}}</p>
+	<p>Alma Mater: {{author.alma_mater}} ({{author.education}})</p>
+	<a href="{{author.wiki}}">Wikipedia</a>
+	<hr/>
+  </div>
+  </body>
+</html>
