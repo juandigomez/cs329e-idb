@@ -5,7 +5,7 @@ import json, logging
 # import the following dependencies from SQLAlchmey
 # and the empty database we created into our environment 
 from sqlalchemy.orm import sessionmaker
-from models import Base, Book, engine
+from models import Base, Book, Author, Publisher, engine
 
 # bind the engine to the base class. This makes the connection
 # between our class definitions and the corresponding tables 
@@ -25,6 +25,7 @@ DBSession = sessionmaker(bind=engine)
 # until we call "commit"
 # create an instance of DBSession
 session = DBSession()
+id_count = 0
 
 def load_json(filename):
     with open(filename) as file:
@@ -35,16 +36,82 @@ def load_json(filename):
 
 def create_books():
     book = load_json('books.json')
+    id_count = 0
 
     for oneBook in book['Books']:
         title = oneBook['title']
-        id = oneBook['id']
+        if 'isbn' in oneBook:
+            isbn = oneBook['isbn']
+        if 'publication_date' in oneBook:
+            publication_date = oneBook['publication_date']
+        google_id = oneBook['google_id']
+        name = oneBook['authors'][0]['name']
+        image = oneBook['image_url']
+        if 'description' in oneBook:
+            description = oneBook['description']
 		
-        newBook = Book(title = title, id = id)
+        newBook = Book(description = description, image = image, author = name, google_id = google_id, publication_date = publication_date, isbn = isbn, title = title, id = id_count)
 		# After I create the book, I can then add it to my session. 
         session.add(newBook)
 		# commit the session to my DB.
         session.commit()
+        id_count += 1
+
+def create_authors():
+    book = load_json('books.json')
+    id_count = 0
+
+    for oneBook in book['Books']:
+        oneAuthor = oneBook['authors'][0]
+        if 'born' in oneAuthor:
+            born = oneAuthor['born']
+        name = oneAuthor['name']
+        if 'education' in oneAuthor:
+            education = oneAuthor['education']
+        if 'nationality' in oneAuthor:
+            nationality = oneAuthor['nationality']
+        if 'description' in oneAuthor:
+            description = oneAuthor['description']
+        if 'alma_mater' in oneAuthor:
+            alma_mater = oneAuthor['alma_mater']
+        if 'wikipedia_url' in oneAuthor:
+            wiki = oneAuthor['wikipedia_url']
+        if 'image_url' in oneAuthor:
+            image = oneAuthor['image_url']
+
+        newAuthor = Author(born = born, name = name, education = education, nationality = nationality, description = description, alma_mater = alma_mater, wiki = wiki, image = image, id = id_count)
+
+        session.add(newAuthor)
+        session.commit()
+        id_count += 1
+
+def create_publisher():
+    book = load_json('books.json')
+    id_count = 0
+
+    for oneBook in book['Books']:
+        onePublisher = oneBook['publishers'][0]
+        name = onePublisher['name']
+        if 'wikipedia_url' in onePublisher:
+            wiki = onePublisher['wikipedia_url']
+        if 'description' in onePublisher:
+            description = onePublisher['description']
+        if 'owner' in onePublisher:
+            owner = onePublisher['owner']
+        if 'image_url' in onePublisher:
+            image = onePublisher['image_url']
+        if 'website' in onePublisher:
+            website = onePublisher['website']
+
+        newPublisher = Publisher(name = name, wiki = wiki, description = description, owner = owner, image = image, website = website, id = id_count)
+
+        session.add(newPublisher)
+        session.commit()
+        id_count += 1
 
 		
 create_books()
+create_authors()
+create_publisher()
+
+

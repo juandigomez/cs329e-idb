@@ -25,9 +25,39 @@ Base = declarative_base()
 
 class Book(Base):
 	__tablename__ = 'book'
+	title = Column(String(3000), nullable = False)
+	id = Column(Integer, primary_key = True, nullable = False)
+	isbn = Column(String(3000))
+	author = Column(String(3000))
+	publication_date = Column(String(3000))
+	google_id = Column(String(3000))
+	image = Column(String(3000))
+	description = Column(String(5000))
+
+class Author(Base):
+	__tablename__ = 'author'
+	name = Column(String(3000), nullable = False)
+	id = Column(Integer, primary_key = True, nullable = False)
+	born = Column(String(3000))
+	education = Column(String(3000))
+	nationality = Column(String(3000))
+	description = Column(String(5000))
+	alma_mater = Column(String(3000))
+	wiki = Column(String(3000))
+	image = Column(String(3000))
+
+class Publisher(Base):
+	__tablename__ = 'publisher'
+	name = Column(String(3000))
+	wiki = Column(String(3000))
+	id = Column(Integer, primary_key = True, nullable = False)
+	description = Column(String(5000))
+	owner = Column(String(3000))
+	image = Column(String(3000))
+	website = Column(String(3000))
 	
-	title = Column(String(80), nullable = False)
-	id = Column(Integer, primary_key = True)
+
+
 
 SQLALCHEMY_DATABASE_URI = os.getenv('SQLALCHEMY_DATABASE_URI', 'postgresql://postgres:group8books@localhost/bookdb')
 engine = create_engine(SQLALCHEMY_DATABASE_URI)
@@ -42,4 +72,3 @@ Base.metadata.create_all(engine)
 # This indicates that you need to install 'psycopg2' module
 # To install the 'psycopg2' module:
 # pip install psycopg2
-
