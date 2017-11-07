@@ -51,7 +51,7 @@ def create_books():
         session.add(newBook)
 		# commit the session to my DB.
         session.commit()
-        id_count++
+        id_count += 1
 
 def create_authors():
     author = load_json('books.json')
@@ -70,7 +70,7 @@ def create_authors():
 
         session.add(newAuthor)
         session.commit()
-        id_count++
+        id_count += 1
 
 def create_publisher():
     publisher = load_json('books.json')
@@ -88,7 +88,7 @@ def create_publisher():
 
         session.add(newPublisher)
         session.commit()
-        id_count++
+        id_count += 1
 
 		
 create_books()
