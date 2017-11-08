@@ -68,7 +68,7 @@
 		</tr>
 		{% for i in books %}
 			<tr>
-				<td><a href="{{url_for('books/{{i.id}}')}}">{{i.title}}</a></td>
+				<td><a href="{{url_for('singlebook', book_id = i.id)}}">{{i.title}}</a></td>
 				<td>{{i.author}}</td>
 				<td>{{i.isbn}}</td>
 				<td>{{i.publication_date}}</td>
