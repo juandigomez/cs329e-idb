@@ -92,7 +92,7 @@ def create_authors():
             image = ""
 
         newAuthor = Author(born = born, name = name, education = education, nationality = nationality, description = description, alma_mater = alma_mater, wiki = wiki, image = image, id = id_count)
-        if session.query(Author.id).filter(Author.name==newAuthor.name).count() > 0:
+        if session.query(Author).filter(Author.name==newAuthor.name).count() == 0:
             session.add(newAuthor)
             session.commit()
             id_count += 1
@@ -126,7 +126,7 @@ def create_publisher():
             website = "N/A"
 
         newPublisher = Publisher(name = name, wiki = wiki, description = description, owner = owner, image = image, website = website, id = id_count)
-        if session.query(Publisher.id).filter(Publisher.name==newPublisher.name).count() > 0:
+        if session.query(Publisher.id).filter(Publisher.name==newPublisher.name).count() == 0:
             session.add(newPublisher)
             session.commit()
             id_count += 1
