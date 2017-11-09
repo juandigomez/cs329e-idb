@@ -36,7 +36,7 @@ def singlebook(book_id):
 @app.route('/authors/')
 def authors():
     authors = session.query(Author).all()
-	return render_template('authors.html', authors = authors)
+    return render_template('authors.html', authors = authors)
 
 @app.route('/authors/<int: author_id>')
 def singleauthor(author_id):
@@ -46,7 +46,7 @@ def singleauthor(author_id):
 @app.route('/publishers/')
 def publishers():
     publishers = session.query(Publisher).all()
-	return render_template('publishers.html', publishers = publishers)
+    return render_template('publishers.html', publishers = publishers)
 
 @app.route('/publishers/<int:pub_id>')
 def singlepublisher(pub_id):
@@ -143,11 +143,8 @@ def hashed_url_for_static_file(endpoint, values):
 
 # If deploying to GCP, uncomment the first if statement and comment out the second
 #if __name__ == '__main__':
-<<<<<<< HEAD
+
 #    app.run(host='127.0.0.1', port=8080, debug=True)
-=======
-    #app.run(host='127.0.0.1', port=8080, debug=True)
->>>>>>> 167c7f357719f662ed06a3b6bc46130a5f0758d7
 
 	
 #If Deploying locally, uncomment the second if statement and comment out the first
