@@ -49,8 +49,9 @@ def create_books():
         image = oneBook['image_url']
         if 'description' in oneBook:
             description = oneBook['description']
+        publisher = oneBook['publishers'][0]['name']
 		
-        newBook = Book(description = description, image = image, author = name, google_id = google_id, publication_date = publication_date, isbn = isbn, title = title, id = id_count)
+        newBook = Book(description = description, image = image, author = name, google_id = google_id, publication_date = publication_date, isbn = isbn, title = title, id = id_count, publisher = publisher)
 		# After I create the book, I can then add it to my session. 
         session.add(newBook)
 		# commit the session to my DB.
