@@ -66,7 +66,7 @@
 		</tr>
 		{% for i in authors %}
 			<tr>
-				<td><a href="{{url_for('singleauthor', author_id = i.id)}}">{{i.name}}</a></td>
+				<td><a data-name = "{{i.name}}" href="{{url_for('singleauthor', author_id = i.id)}}">{{i.name}}</a></td>
 				<td>{{i.born}}</td>
 				<td>{{i.alma_mater}}</td>
 				<td>{{i.nationality}}</td>
