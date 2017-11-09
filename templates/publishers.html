@@ -69,7 +69,7 @@
 				<td><a href="{{url_for('singlepublisher', pub_id = i.id)}}">{{i.name}}</a></td>
 				<td><a href="{{i.website}}">{{i.website}}</a></td>
 				<td>{{i.owner}}</td>
-				<td>{{i.wiki}}</td>
+				<td><a href ="{{i.wiki}}">{{i.wiki}}</a></td>
 				<td>{{i.description}}</td>
 			</tr>
 		{% endfor %}
