@@ -58,9 +58,9 @@
 
 	<p>Publication Date: {{book.publication_date}}</p>
 
-	<p>Publisher: {{book.publisher}}</p>
+	<p>Publisher: <a href="{{url_for('singlepublisher', pub_id = book.pub_id)}}">{{book.publisher}}</a></p>
 
-	<p>Author: {{book.author}}</a>
+	<p>Author: <a href="{{url_for('singleauthor', author_id = book.author_id)}}">{{book.author}}</a></p>
 
 	<hr/>
 
