@@ -66,7 +66,7 @@
 		</tr>
 		{% for i in publishers %}
 			<tr>
-				<td><a href="{{url_for('singlepublisher', pub_id = i.id)}}">{{i.name}}</a></td>
+				<td><a data-name = "{{i.name}}" href="{{url_for('singlepublisher', pub_id = i.id)}}">{{i.name}}</a></td>
 				<td><a href="{{i.website}}">{{i.website}}</a></td>
 				<td>{{i.owner}}</td>
 				<td><a href ="{{i.wiki}}">{{i.wiki}}</a></td>

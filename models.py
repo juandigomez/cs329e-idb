@@ -34,6 +34,8 @@ class Book(Base):
 	image = Column(String(3000))
 	description = Column(String(5000))
 	publisher = Column(String(1000))
+	author_id = Column(Integer)
+	pub_id = Column(Integer)
 
 class Author(Base):
 	__tablename__ = 'author'

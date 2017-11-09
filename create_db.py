@@ -50,8 +50,11 @@ def create_books():
         if 'description' in oneBook:
             description = oneBook['description']
         publisher = oneBook['publishers'][0]['name']
+
+        author_id = session.query(Author).filter(Author.name == name).first()
+        pub_id = session.query(Publisher).filter(Publisher.name == publisher).first()
 		
-        newBook = Book(description = description, image = image, author = name, google_id = google_id, publication_date = publication_date, isbn = isbn, title = title, id = id_count, publisher = publisher)
+        newBook = Book(description = description, image = image, author = name, google_id = google_id, publication_date = publication_date, isbn = isbn, title = title, id = id_count, publisher = publisher, author_id = author_id.id, pub_id = pub_id.id)
 		# After I create the book, I can then add it to my session. 
         session.add(newBook)
 		# commit the session to my DB.
@@ -132,9 +135,8 @@ def create_publisher():
             session.commit()
             id_count += 1
 
-		
-create_books()
+
 create_authors()
 create_publisher()
-
+create_books()
 
