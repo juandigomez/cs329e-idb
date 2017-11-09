@@ -68,22 +68,34 @@ def create_authors():
         name = oneAuthor['name']
         if 'education' in oneAuthor:
             education = oneAuthor['education']
+        else:
+            education = "N/A"
         if 'nationality' in oneAuthor:
             nationality = oneAuthor['nationality']
+        else:
+            nationality = "N/A"
         if 'description' in oneAuthor:
             description = oneAuthor['description']
+        else:
+            description = "N/A"
         if 'alma_mater' in oneAuthor:
             alma_mater = oneAuthor['alma_mater']
+        else:
+            alma_mater = "N/A"
         if 'wikipedia_url' in oneAuthor:
             wiki = oneAuthor['wikipedia_url']
+        else:
+            wiki = "N/A"
         if 'image_url' in oneAuthor:
             image = oneAuthor['image_url']
+        else:
+            image = ""
 
         newAuthor = Author(born = born, name = name, education = education, nationality = nationality, description = description, alma_mater = alma_mater, wiki = wiki, image = image, id = id_count)
-
-        session.add(newAuthor)
-        session.commit()
-        id_count += 1
+        if session.query(Author).filter(Author.name==newAuthor.name).count() == 0:
+            session.add(newAuthor)
+            session.commit()
+            id_count += 1
 
 def create_publisher():
     book = load_json('books.json')
@@ -94,20 +106,30 @@ def create_publisher():
         name = onePublisher['name']
         if 'wikipedia_url' in onePublisher:
             wiki = onePublisher['wikipedia_url']
+        else:
+            wiki = "N/A"
         if 'description' in onePublisher:
             description = onePublisher['description']
+        else:
+            description = "N/A"
         if 'owner' in onePublisher:
             owner = onePublisher['owner']
+        else:
+            owner = "N/A"
         if 'image_url' in onePublisher:
             image = onePublisher['image_url']
+        else:
+            image = ""
         if 'website' in onePublisher:
             website = onePublisher['website']
+        else:
+            website = "N/A"
 
         newPublisher = Publisher(name = name, wiki = wiki, description = description, owner = owner, image = image, website = website, id = id_count)
-
-        session.add(newPublisher)
-        session.commit()
-        id_count += 1
+        if session.query(Publisher.id).filter(Publisher.name==newPublisher.name).count() == 0:
+            session.add(newPublisher)
+            session.commit()
+            id_count += 1
 
 		
 create_books()

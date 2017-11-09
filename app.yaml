@@ -1,6 +1,20 @@
 runtime: python
+threadsafe: yes
 env: flex
 entrypoint: gunicorn -b :$PORT app:app
 
 runtime_config:
   python_version: 3
+
+env_variables:
+    # Replace user, password, database, and instance connection name with the values obtained
+    # when configuring your Cloud SQL instance.
+    SQLALCHEMY_DATABASE_URI: >-
+      postgresql+psycopg2://postgres:group8books@/bookdb?host=/cloudsql/group-8-website:us-central1:group8website
+
+beta_settings:
+    cloud_sql_instances: group-8-website:us-central1:group8website
+
+handlers:
+- url: /.*
+  script: app.app

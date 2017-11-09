@@ -64,38 +64,16 @@
 			<th onclick = "sortTable(3)">Wikipedia URL</th>
 			<th onclick = "sortTable(4)">Description</th>
 		</tr>
-		{% for i in books %}
+		{% for i in publishers %}
 			<tr>
-				<td><a href="{{url_for('publishers/{{i.id}}')}}">{{i.name}}</a></td>
+				<td><a href="{{url_for('singlepublisher', pub_id = i.id)}}">{{i.name}}</a></td>
 				<td><a href="{{i.website}}">{{i.website}}</a></td>
 				<td>{{i.owner}}</td>
 				<td>{{i.wiki}}</td>
 				<td>{{i.description}}</td>
 			</tr>
 		{% endfor %}
-		<!--
-		<tr>
-			<td><a href = "{{url_for('palgravemacmillan')}}">Palgrave Macmillan</a></td>
-			<td><a href = "http://www.palgrave.com">http://www.palgrave.com</a></td>
-			<td>Springer Nature</td>
-			<td>2000</td>
-			<td>Palgrave Macmillan is an international academic and trade publishing company. Its programme includes textbooks, journals, monographs, professional and reference works in print and online.</td>
-		</tr>
-		<tr>
-			<td><a href = "{{url_for('delreybooks')}}">Del Rey Books</a></td>
-			<td><a href = "http://sf-fantasy.suvudu.com">http://sf-fantasy.suvudu.com</a></td>
-			<td>Random House</td>
-			<td>1977</td>
-			<td>Del Rey Books is a branch of Ballantine Books, which is owned by Random House and, in turn, by Penguin Random House. It is a separate imprint established in 1977 under the editorship of author Lester del Rey and his wife Judy-Lynn del Rey.</td>
-		</tr>
-		<tr>
-			<td><a href = "{{url_for('allenandunwin')}}">Allen &amp; Unwin</a></td>
-			<td><a href = "http://allenandunwin.com">http://allenandunwin.com</a></td>
-			<td>N/A</td>
-			<td>1914 (British), 1976 (Australian)</td>
-			<td>Allen &amp; Unwin is an Australian independent publishing company, established in Australia in 1976 as a subsidiary of the British firm George Allen &amp; Unwin Ltd., which was founded by Sir Stanley Unwin in August 1914 and went on to become one of the leading publishers of the twentieth century.</td>
-		</tr>
-		-->
+
 	</table>
 </body>
 </html>

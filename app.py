@@ -1,7 +1,7 @@
 from flask import Flask, render_template, request, url_for
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
-from models import Base, Book, engine
+from models import Base, Book, Author, Publisher, engine
 from create_db import create_books, session
 import os
 # create a flask object (flask needs an object to represent the application)
@@ -28,20 +28,20 @@ def books():
 	books = session.query(Book).all()
 	return render_template('books.html', books = books)
 
-@app.route('/books/<int: book_id>')
+@app.route('/books/<int:book_id>')
 def singlebook(book_id):
     single_book = session.query(Book).get(book_id)
-    return render_template('singlebook.html', book = single_book)
+    return render_template('singlebook.html', book_id = book_id, book = single_book)
 
 @app.route('/authors/')
 def authors():
     authors = session.query(Author).all()
     return render_template('authors.html', authors = authors)
 
-@app.route('/authors/<int: author_id>')
+@app.route('/authors/<int:author_id>')
 def singleauthor(author_id):
     single_author = session.query(Author).get(author_id)
-    return render_template('singleauthor.html', author = single_author)
+    return render_template('singleauthor.html', author_id = author_id, author = single_author)
 	
 @app.route('/publishers/')
 def publishers():
@@ -51,9 +51,9 @@ def publishers():
 @app.route('/publishers/<int:pub_id>')
 def singlepublisher(pub_id):
     single_publisher = session.query(Publisher).get(pub_id)
-    return render_template('singlepublisher.html', publisher = publisher)
+    return render_template('singlepublisher.html', pub_id = pub_id, publisher = single_publisher)
 
-# Individual author pages	
+"""# Individual author pages	
 @app.route('/authors-Garth_Nix/')
 def nix():
 	return render_template('nix.html')
@@ -90,7 +90,7 @@ def delreybooks():
 
 @app.route('/allenandunwin/')
 def allenandunwin():
-    return render_template('allenandunwin.html')
+    return render_template('allenandunwin.html')"""
 
 
 # The following functions handle caching problems
@@ -143,6 +143,7 @@ def hashed_url_for_static_file(endpoint, values):
 
 # If deploying to GCP, uncomment the first if statement and comment out the second
 #if __name__ == '__main__':
+
 
 #    app.run(host='127.0.0.1', port=8080, debug=True)
 
