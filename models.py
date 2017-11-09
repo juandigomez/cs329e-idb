@@ -33,6 +33,7 @@ class Book(Base):
 	google_id = Column(String(3000))
 	image = Column(String(3000))
 	description = Column(String(5000))
+	publisher = Column(String(1000))
 
 class Author(Base):
 	__tablename__ = 'author'
