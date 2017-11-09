@@ -6,38 +6,6 @@
   	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 	<link rel="stylesheet" type="text/css" href="../static/css/layout.css">
 	<title>Publishers</title>
-</head>
-<body id="bootstrapBody">
-	<div class = "container">
-		<ul class = "nav nav-tabs nav-fill">
-			<li><a href="{{url_for('index')}}">Home</a></li>
-			<li><a href="{{url_for('aboutus')}}">About Us</a></li>
-			<li><a href="{{url_for('books')}}">Books</a></li>
-			<li><a href="{{url_for('authors')}}">Authors</a></li>
-			<li class = "active"><a href="{{url_for('publishers')}}">Publishers</a></li>
-		</ul>
-	</div>
-	<h1 id = "pageTitle">Publishers</h1>
-	<table id = "publishersTable" BORDER = "2">
-		<tr>
-			<th onclick = "sortTable(0)">Publisher Name</th>
-			<th onclick = "sortTable(1)">Website</th>
-			<th onclick = "sortTable(2)">Parent Company</th>
-			<th onclick = "sortTable(3)">Wikipedia URL</th>
-			<th onclick = "sortTable(4)">Description</th>
-		</tr>
-		{% for i in publishers %}
-			<tr>
-				<td><a href="{{url_for('singlepublisher', pub_id = i.id)}}">{{i.name}}</a></td>
-				<td><a href="{{i.website}}">{{i.website}}</a></td>
-				<td>{{i.owner}}</td>
-				<td>{{i.wiki}}</td>
-				<td>{{i.description}}</td>
-			</tr>
-		{% endfor %}
-
-	</table>
-</body>
 	<script type="text/javascript">
 		function sortTable(n) {
 			var table, rows, switching, i, x, y, shouldSwitch, dir, switchcount = 0;
@@ -76,4 +44,36 @@
 			}
 		}
 	</script>
+</head>
+<body id="bootstrapBody">
+	<div class = "container">
+		<ul class = "nav nav-tabs nav-fill">
+			<li><a href="{{url_for('index')}}">Home</a></li>
+			<li><a href="{{url_for('aboutus')}}">About Us</a></li>
+			<li><a href="{{url_for('books')}}">Books</a></li>
+			<li><a href="{{url_for('authors')}}">Authors</a></li>
+			<li class = "active"><a href="{{url_for('publishers')}}">Publishers</a></li>
+		</ul>
+	</div>
+	<h1 id = "pageTitle">Publishers</h1>
+	<table id = "publishersTable" BORDER = "2">
+		<tr>
+			<th onclick = "sortTable(0)">Publisher Name</th>
+			<th onclick = "sortTable(1)">Website</th>
+			<th onclick = "sortTable(2)">Parent Company</th>
+			<th onclick = "sortTable(3)">Wikipedia URL</th>
+			<th onclick = "sortTable(4)">Description</th>
+		</tr>
+		{% for i in publishers %}
+			<tr>
+				<td><a href="{{url_for('singlepublisher', pub_id = i.id)}}">{{i.name}}</a></td>
+				<td><a href="{{i.website}}">{{i.website}}</a></td>
+				<td>{{i.owner}}</td>
+				<td>{{i.wiki}}</td>
+				<td>{{i.description}}</td>
+			</tr>
+		{% endfor %}
+
+	</table>
+</body>
 </html>

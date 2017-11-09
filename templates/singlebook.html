@@ -1,38 +1,71 @@
 <!DOCTYPE HTML>
 
+
+
 <html> 
 
   <head>
+
     <title>{{book.title}}</title>
+
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
   	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  	
   	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	
 	<link rel="stylesheet" type="text/css" href="../static/css/layout.css">
+
   </head>
 
+
+
   <body id="bootstrapBody">
+
 	<div class = "container">
+	
 		<ul class = "nav nav-tabs nav-fill">
+	
 			<li><a href="{{url_for('index')}}">Home</a></li>
+	
 			<li><a href="{{url_for('aboutus')}}">About Us</a></li>
-			<li><a href="{{url_for('books')}}">Books</a></li>	
+	
+			<li><a href="{{url_for('books')}}">Books</a></li>
+	
 			<li><a href="{{url_for('authors')}}">Authors</a></li>
+	
 			<li><a href="{{url_for('publishers')}}">Publishers</a></li>
+	
 		</ul>
+	
 	</div>
 
   <div class="center">	
+
 	<h1>{{book.title}}</h1>
+
 	<hr>
+
 	<img src= "{{book.image}}">
+
 	<p>
+
 		{{book.description}}
+
 	</p>
+
 	<p>ISBN: {{book.isbn}}</p>
+
 	<p>Publication Date: {{book.publication_date}}</p>
+
 	<p>Publisher: {{book.publisher}}</p>
+
 	<p>Author: {{book.author}}</a>
+
 	<hr/>
+
   </div>
+
   </body>
+
 </html>

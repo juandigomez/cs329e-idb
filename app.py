@@ -6,7 +6,7 @@ from create_db import create_books, session
 import subprocess
 import json
 import os
-
+import test
 # create a flask object (flask needs an object to represent the application)
 app = Flask(__name__) 
  
@@ -57,10 +57,10 @@ def singlepublisher(pub_id):
     return render_template('singlepublisher.html', pub_id = pub_id, publisher = single_publisher)
 	
 @app.route('/unit_tests')
-def unit_tests():
-    output = subprocess.getoutput("python test.py")
-    return json.dumps({'output': str(output)})
-
+def unit_tests(name = None):
+  output = subprocess.getoutput("python test.py")
+  return json.dumps({'output': str(output)})
+	
 """# Individual author pages	
 @app.route('/authors-Garth_Nix/')
 def nix():
