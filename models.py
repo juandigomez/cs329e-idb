@@ -4,6 +4,7 @@ This file defines the models for a book
 # for manipulating diff parts of Python's run-time environment
 import sys
 import os
+
 # for writing mapper code
 from sqlalchemy import Column, ForeignKey, Integer, String
 
@@ -51,40 +52,6 @@ class Author(Base):
 
 class Publisher(Base):
 	__tablename__ = 'publisher'
-	name = Column(String(3000))
-	wiki = Column(String(3000))
-	id = Column(Integer, primary_key = True, nullable = False)
-	description = Column(String(5000))
-	owner = Column(String(3000))
-	image = Column(String(3000))
-	website = Column(String(3000))
-	
-class TestBook(Base):
-	__tablename__ = 'test_book'
-	title = Column(String(3000), nullable = False)
-	id = Column(Integer, primary_key = True, nullable = False)
-	isbn = Column(String(3000))
-	author = Column(String(3000))
-	publication_date = Column(String(3000))
-	google_id = Column(String(3000))
-	image = Column(String(3000))
-	description = Column(String(5000))
-	publisher = Column(String(1000))
-
-class TestAuthor(Base):
-	__tablename__ = 'test_author'
-	name = Column(String(3000), nullable = False)
-	id = Column(Integer, primary_key = True, nullable = False)
-	born = Column(String(3000))
-	education = Column(String(3000))
-	nationality = Column(String(3000))
-	description = Column(String(5000))
-	alma_mater = Column(String(3000))
-	wiki = Column(String(3000))
-	image = Column(String(3000))
-
-class TestPublisher(Base):
-	__tablename__ = 'test_publisher'
 	name = Column(String(3000))
 	wiki = Column(String(3000))
 	id = Column(Integer, primary_key = True, nullable = False)

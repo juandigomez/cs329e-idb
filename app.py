@@ -56,10 +56,6 @@ def singlepublisher(pub_id):
     single_publisher = session.query(Publisher).get(pub_id)
     return render_template('singlepublisher.html', pub_id = pub_id, publisher = single_publisher)
 	
-@app.route('/unit_tests')
-def unit_tests(name = None):
-  output = subprocess.getoutput("python test.py")
-  return json.dumps({'output': str(output)})
 	
 """# Individual author pages	
 @app.route('/authors-Garth_Nix/')
