@@ -43,6 +43,24 @@
 				}
 			}
 		}
+		function tableSearch() {
+  			var input, filter, table, tr, td, i;
+  			input = document.getElementById("myInput");
+  			filter = input.value.toUpperCase();
+  			table = document.getElementById("authorsTable");
+ 			tr = table.getElementsByTagName("tr");
+
+  			for (i = 0; i < tr.length; i++) {
+   				td = tr[i].getElementsByTagName("td")[0];
+    			if (td) {
+     				if (td.innerHTML.toUpperCase().indexOf(filter) > -1) {
+       					tr[i].style.display = "";
+      				} else {
+        				tr[i].style.display = "none";
+      				}
+    			} 
+  			}
+		}
 	</script>
 </head>
 <body id="bootstrapBody">
@@ -56,6 +74,11 @@
 		</ul>
 	</div>
 	<h1 id = "pageTitle">Authors</h1>
+	<div class="col-sm-3 pull-right">
+      	<div class="input-group">
+        	<input type="text" id = "myInput" onkeyup="tableSearch()" class="form-control" placeholder="Search by author name...">
+     	</div>
+    </div>
 	<table id = "authorsTable" BORDER = "2">
 		<tr>
 			<th onclick = "sortTable(0)">Author Name</th>

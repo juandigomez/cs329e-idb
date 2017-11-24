@@ -45,6 +45,24 @@
 				}
 			}
 		}
+		function tableSearch() {
+  			var input, filter, table, tr, td, i;
+  			input = document.getElementById("myInput");
+  			filter = input.value.toUpperCase();
+  			table = document.getElementById("booksTable");
+ 			tr = table.getElementsByTagName("tr");
+
+  			for (i = 0; i < tr.length; i++) {
+   				td = tr[i].getElementsByTagName("td")[0];
+    			if (td) {
+     				if (td.innerHTML.toUpperCase().indexOf(filter) > -1) {
+       					tr[i].style.display = "";
+      				} else {
+        				tr[i].style.display = "none";
+      				}
+    			} 
+  			}
+		}
 	</script>
 </head>
 <body id="bootstrapBody">
@@ -58,6 +76,11 @@
 		</ul>
 	</div>
 	<h1 class = "bd-title" id = "pageTitle">Books</h1>
+	<div class="col-sm-3 pull-right">
+      	<div class="input-group">
+        	<input type="text" id = "myInput" onkeyup="tableSearch()" class="form-control" placeholder="Search by book name...">
+     	</div>
+    </div>
 	<table id = "booksTable" BORDER = "2">
 		<tr>
 			<th onclick = "sortTable(0)">Title</th> 
