@@ -69,7 +69,7 @@ div a.splash{
 	text-align: center;
 }
 
-.publishersTable{
+#publishersTable{
 	color: white;
 	column-count: 5;
 	font-size: 30px;
